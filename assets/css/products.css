@@ -1,0 +1,43 @@
+.container .products .col {
+  margin-bottom: 20px;
+}
+
+.container .products .product .card {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.container .products .product .card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.container .products .product .price {
+  display: inline;
+  padding: 0 0 0 6px;
+  color: var(--gold-color);
+  border: 1px solid var(--gold-color);
+}
+
+.container .products .product .price .currency {
+  background-color: var(--gold-color);
+  color: #FFFFFF;
+  padding: 0 6px;
+  margin-left: 6px;
+}
+
+.container .products .navigation-wrapper {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.container .products .navigation-wrapper a {
+  color: var(--gold-color);
+  border-color: var(--gold-color);
+}
+
+@media (max-width: 995px) {
+  .container .products .title {
+    text-align: center;
+  }
+}

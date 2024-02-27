@@ -1,0 +1,258 @@
+:root {
+  --playfair-font: "Playfair Display", serif;
+  --nunito-font: "Nunito Sans", sans-serif;
+  --great-vibes-font: "Great Vibes", cursive;
+  --gold-color: rgb(155, 96, 48);
+  --gold-pale-color: rgb(211, 170, 137);
+  --gold-strong-color: rgb(54, 37, 22);
+}
+
+body {
+  font-family: var(--nunito-font);
+  background-color: rgb(240, 240, 240);
+  position: relative;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.outer-container {
+  background-color: #FFFFFF;
+}
+
+body .outer-container > .container {
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 50px;
+}
+
+.container .title {
+  font-family: var(--playfair-font);
+  color: var(--gold-color);
+  margin: 0;
+  padding: 0 0 20px;
+  border-bottom: 3px solid var(--gold-color);
+  margin-bottom: 30px;
+}
+
+header {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+}
+
+header .burger-menu {
+  display: none;
+}
+
+header .brand {
+  margin: 10px auto;
+  color: var(--gold-color);
+  font-family: var(--great-vibes-font);
+  font-size: 30px;
+  text-transform: capitalize;
+  font-weight: lighter;
+  user-select: none;
+}
+
+header .brand-name {
+  position: fixed;
+  left: 5%;
+  top: 15px;
+}
+
+header .navigation .brand-name-mobile {
+  display: none;
+}
+
+header .navigation {
+  width: 100%;
+  background-color: #FFFFFF;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .navigation .close-icon {
+  display: none;
+}
+
+header .navigation ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .navigation ul li a {
+  display: block;
+  padding: 26px 16px;
+  text-decoration: none;
+  color: rgb(32, 32, 32);
+  box-sizing: border-box;
+}
+
+header .navigation ul li a:hover {
+  color: var(--gold-color);
+}
+
+header .navigation ul li a.active {
+  color: var(--gold-color);
+  border-bottom: 3px solid var(--gold-color);
+}
+
+footer {
+  position: relative;
+  background-color: #FFFFFF;
+  padding: 30px 0;
+  border-top: 3px solid var(--gold-color);
+}
+
+footer .to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+footer nav ul {
+  display: flex;
+  justify-content: start;
+}
+
+footer nav ul a {
+  text-decoration: none;
+  padding-right: 16px;
+  color: rgb(32, 32, 32);
+}
+
+footer nav ul a:hover {
+  color: var(--gold-color);
+}
+
+footer .social-media {
+  display: flex;
+  justify-content: start;
+}
+
+footer .social-media li {
+  margin-right: 20px;
+}
+
+footer .social-media li a {
+  color: rgb(32, 32, 32);
+  font-size: 20px;
+}
+
+footer .social-media li a:hover {
+  color: var(--gold-color);
+}
+
+footer .copyrights {
+  color: rgb(71, 71, 71);
+}
+
+@media (max-width: 995px) {
+
+  header {
+    height: 100px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+  }
+
+  header .burger-menu {
+    display: block;
+    position: fixed;
+    right: 26px;
+    top: 30px;
+    font-size: 26px;
+  }
+
+  header .brand-name {
+    z-index: -1;
+  }
+
+  header .navigation .brand-name-mobile {
+    display: block;
+  }
+
+  header .navigation {
+    padding-top: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    right: -250px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    transition: right 0.2s ease-in-out;
+  }
+
+  header:after {
+    content: "";
+    display: none;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+  }
+
+  header .navigation .close-icon {
+    display: block;
+    margin: 0 auto;
+    font-size: 40px;
+  }
+  
+  header .navigation ul {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  header .navigation ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  header .navigation ul li a.active {
+    border: none;
+    background-color: var(--gold-color);
+    color: #FFFFFF;
+  }
+
+  body.open-menu {
+    overflow: hidden;
+  }
+
+  body.open-menu header .navigation {
+    right: 0;
+  }
+
+  body.open-menu header:after {
+    display: block;
+  }
+
+  footer .to-top {
+    bottom: 10px;
+  }
+
+  footer nav ul {
+    justify-content: center;
+  }
+
+  footer .copyrights,
+  footer h6 {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  footer .social-media {
+    justify-content: center;
+  }
+}
